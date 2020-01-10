@@ -31,7 +31,7 @@ public class WorkHours {
 		for(int i = 0; i < numDaysWorked; i++) {
 			System.out.println("Please enter starting hour for " + day[i] + " (00 to 23)");
 			int startHr = keyboard.nextInt(); 
-			System.out.println("Please enter the starting minute for day " + i );
+			System.out.println("Please enter the starting minute for " + day[i]);
 			int startMin = keyboard.nextInt();
 			startTime[i] = (startHr * 60) + startMin;
 			
@@ -61,9 +61,9 @@ public class WorkHours {
 			}//end else
 			
 			//Determine end of work day time and calculate time worked for entire day.
-			System.out.println("Please enter the quitting hour for the day: ");
+			System.out.println("Please enter the quitting hour for " + day[i]);
 			int quitHour = keyboard.nextInt();
-			System.out.println("Please enter the quitting minutes for the day: ");
+			System.out.println("Please enter the quitting minutes for " + day[i]);
 			int quitMin = keyboard.nextInt();
 			endTime[i] = (quitHour * 60) + quitMin;
 			dayTime[i] = endTime[i] - startTime[i] - lunchTime[i];
